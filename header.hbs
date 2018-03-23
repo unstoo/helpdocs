@@ -1,19 +1,23 @@
 <div id="header">
   <div class="container-fluid">
     <nav class="navbar navbar-light bg-faded">
-      <a class="navbar-brand" href="{{fallback meta.home_path "/"}}">
-        <span>
-          {{#if config.logo}}
-            <img class="img-responsive logo" src="{{config.logo}}">
-          {{/if}}
-          {{#if config.brand}}
-            <b>{{config.brand}}</b>
-          {{/if}}
-        </span>
-      </a>
+          <ul>
+            <li>
+              <a href='https://cryptopay.me/' class='cryptopay-home'>{{config.brand}}</a>
+            </li>
+            <li>
+              <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdeks</a>              
+            </li>
+          </ul>
       <div class="spacer"></div>
       <div class="nav-items">
         <ul class="nav navbar-nav">
+          <li lass="nav-item">
+            <a href=''>Sign Up</a>
+          </li>
+          <li lass="nav-item">
+            <a href=''>Sign In</a>
+          </li>
           {{#if config.nav_items}}
             {{#each config.nav_items}}
               <li class="nav-item">
@@ -59,7 +63,8 @@
       <div class="col-xs-12 col-md-6 offset-md-3">
         <div id="instant-search">
           <form action="{{rootPath meta.home_path}}/search" method="GET">
-            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Help me with..."}}">
+            <label>How can we help?</label>
+            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
           </form>
         </div>
         <span class="fa fa-search"></span>
@@ -120,7 +125,6 @@
     {{/each}}
   </div>
 {{/inline}}
-
 
 {{#*inline "sidebar"}}
   
