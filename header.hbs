@@ -73,38 +73,74 @@
       </div>
     </div>
   </div>
-  <!-- Вырезал Топ Артикли
-  {{#page "categories"}}
-    {{#if meta.top_articles}}
-      <div id="top-articles-container" class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div class="text-xs-center">
-              <p class="top-articles-label">
-                <i class="fa fa-trophy"></i>
-                {{i18n "top_articles" "Top Articles"}}
-              </p>
-              <p class="top-articles">
-                {{#each meta.top_articles}}
-                  {{#unless (gt @index 2)}}
-                    <span class="top-article">
-                      <a class="article-title-link" href="{{this.relative_url}}">
-                        {{this.title}}
-                      </a>
-                      {{#unless @last}}
-                        {{#unless (gt @index 1)}}
-                          &#8203; | &#8203;
-                        {{/unless}}
-                      {{/unless}}
-                    </span>
-                  {{/unless}}
-                {{/each}}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    {{/if}}
-  {{/page}}
-  -->
 </div>
+
+
+
+
+
+{{! takes c *models.Category and level int as partial parameters}}
+{{#*inline "sidebar_category"}}
+  <a
+    class="sidebar-category{{#page "category"}}{{#if (eq category.category_id c.category_id)}} current{{/if}}{{/page}}"
+    href="#category-{{c.category_id}}-items"
+    data-toggle="collapse"
+    aria-expanded="false"
+    aria-controls="category-{{c.category_id}}-items"
+  >
+    <p
+      id="category-{{c.category_id}}-title"
+      style="margin-left: {{multiply 0.5 level}}em !important; font-size: {{subtract 1 (multiply 0.05 level)}}em !important;"
+      {{#categoryIsAscendent @root.meta.sidebar_categories category c}}
+        class="expanded"
+      {{/categoryIsAscendent}}
+      onclick="toggleCategoryIcon(event, '{{c.category_id}}')"
+    >
+      {{c.title}}
+    </p>
+  </a>
+  <div
+    id="category-{{c.category_id}}-items"
+    class="collapse{{#categoryIsAscendent @root.meta.sidebar_categories category c}} in {{/categoryIsAscendent}}"
+    data-toggle="collapse"
+  >
+    {{#each (filterCategoriesByParentId @root.meta.sidebar_categories c.category_id)}}
+      {{> sidebar_category c=this level=(add level 1)}}
+    {{/each}}
+    {{#each c.articles}}
+      <a
+        class="sidebar-article{{#page "article"}}{{#if (eq article.article_id this.article_id)}} current{{/if}}{{/page}}"
+        href="{{this.relative_url}}"
+        onclick="window.location.href='{{this.relative_url}}'"
+      >
+        <p style="margin-left: {{multiply 0.5 (add level 1)}}em !important; font-size: {{subtract 1 (multiply 0.05 (add level 1))}} !important;">
+          {{this.title}}
+        </p>
+      </a>
+    {{/each}}
+  </div>
+{{/inline}}
+
+
+{{#*inline "sidebar"}}
+  
+    <div id="sidebar">
+      {{#each meta.sidebar_categories}}
+        {{#unless this.parent_category_id}}
+          {{> sidebar_category c=this level=0}}
+        {{/unless}}
+      {{/each}}
+    </div>
+    <script>
+      function toggleCategoryIcon (event, category_id) {
+        var $p = $('#category-' + category_id + '-title');
+        if ($p.hasClass('expanded')) {
+          $p.removeClass('expanded');
+        } else {
+          $p.addClass('expanded');
+        }
+      }
+    </script>
+  
+
+{{/inline}}
