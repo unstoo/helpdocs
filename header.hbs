@@ -1,17 +1,19 @@
 <div id="header">
-  <div class="container-fluid">
-    <nav class="navbar navbar-light bg-faded">
-          <ul>
-            <li>
-              <a href='https://cryptopay.me/' class='cryptopay-home'>{{config.brand}}</a>
-            </li>
-            <li>
-              <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdeks</a>              
-            </li>
-          </ul>
+  <div class="container-fluid main-header-1">
+    <nav class="nav-bar">
+      <ul class='nav-list'>
+        <li>
+          <a href='https://cryptopay.me/' class='cryptopay-home'>{{config.brand}}</a>
+        </li>
+        <li>
+          <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdesk</a>              
+        </li>
+      </ul>
+
       <div class="spacer"></div>
+
       <div class="nav-items">
-        <ul class="nav navbar-nav">
+        <ul class="nav-list-2 nav navbar-nav">
           <li lass="nav-item">
             <a href=''>Sign Up</a>
           </li>
@@ -21,7 +23,7 @@
           {{#if config.nav_items}}
             {{#each config.nav_items}}
               <li class="nav-item">
-                <a class="nav-link" href="{{this.href}}" target="{{fallback this.target "_blank"}}">
+                <a class="contact-us" href="{{this.href}}" target="{{fallback this.target "_blank"}}">
                   {{this.title}}
                 </a>
               </li>
@@ -52,22 +54,27 @@
             </li>
           {{/if}}
           <li class="nav-item">
-            {{> contactLink}}
+            {{> contactLink class='contact-us-btn'}}
           </li>
         </ul>
       </div>
     </nav>
   </div>
-  <div id="search-container" class="container-fluid{{#unless meta.is_home_page}} search-responsive{{/unless}}">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 offset-md-3">
-        <div id="instant-search">
-          <form action="{{rootPath meta.home_path}}/search" method="GET">
-            <label>How can we help?</label>
-            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
-          </form>
+
+
+  <div id="search-container" class="container-fluid">
+    
+      <div id="categories" class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div id="instant-search">
+            <form action="{{rootPath meta.home_path}}/search" method="GET">
+              <label>How can we help?</label>
+              <div class='search-input-container'>
+                <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+                <span class="search-icon"></span>
+              </div>
+            </form>
         </div>
-        <span class="fa fa-search"></span>
       </div>
     </div>
   </div>
