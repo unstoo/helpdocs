@@ -1,15 +1,47 @@
 <div id="home">
-  <div id="categories" class="categories-container">
+  <div id="categories" class="container-fluid row">
     {{#each categories}}
       {{#unless this.parent_category_id}}
-        <div class="category-card">
-          <a class="card-link" href="{{this.relative_url}}">
+        <div class='col-sm-6 col-md-3'>
+          <div class="category-card">
             <div class="category-card-inner">
-              <h3 class="card-title">{{this.title}}</h3>
-                 
-			        <span class='more-hint'>More ></span>
+              <div>
+                <a class="card-link" href="{{this.relative_url}}">
+                  <h3 class="card-title">{{this.title}}</h3>
+                </a>
+              </div>
+              <div class='category-card-bottom'>
+                <ul class='card-links-list'>
+                  {{#each this.articles}} 
+                    {{#if (lt @index 2)}} 
+                      <li> <a href='{{this.relative_url}}'>{{this.title}}</a></li>  
+                    {{/if}}
+                  {{/each}}
+                </ul>
+
+                {{#if (eq this.category_id "iofp5bchci")}} 
+                <!-- хардкодэд id категории, из которой нужно подтягивать подкатегории, а не статьи -->
+                  <ul class='card-links-list'>
+                    {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
+                      {{#if (lt @index 4)}} 
+                        <li> <a href={{this.relative_url}}>{{this.title}}</a> </li>
+                      {{/if}}
+                    {{/each}}
+                  </ul>
+                {{/if}}
+
+                {{#unless (eq this.category_id "iofp5bchci")}}
+                  <a class="card-link" href="{{this.relative_url}}">
+                    <span class='more-hint'>More ></span>
+                  </a> 
+                {{/unless}}
+
+              </div>
+                
             </div>
-          </a>
+            
+          </div>
+
         </div>
       {{/unless}}
     {{/each}}

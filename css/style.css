@@ -1,22 +1,14 @@
 @font-face {
-    font-family: 'ProximaNovaT-Thin';
-    src: url('https://ico.cryptopay.me/fonts/proxima-nova-thin.eot');
-    src: url('https://ico.cryptopay.me/fonts/proxima-nova-thin.eot?#iefix') format('embedded-opentype'),
-             url('https://ico.cryptopay.me/fonts/proxima-nova-thin.woff2') format('woff2'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-thin.woff') format('woff'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-thin.ttf') format('truetype'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-thin.svg#youworkforthem') format('svg');
+    font-family: 'ProximaNova-Thin';
+    src: 
+             url('https://ico.cryptopay.me/fonts/proxima-nova-thin.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'ProximaNova-Light';
-    src: url('https://ico.cryptopay.me/fonts/proxima-nova-light.eot');
-    src: url('https://ico.cryptopay.me/fonts/proxima-nova-light.eot?#iefix') format('embedded-opentype'),
-             url('https://ico.cryptopay.me/fonts/proxima-nova-light.woff2') format('woff2'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-light.woff') format('woff'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-light.ttf') format('truetype'),
-         url('https://ico.cryptopay.me/fonts/proxima-nova-light.svg#youworkforthem') format('svg');
+    src:
+             url('https://ico.cryptopay.me/fonts/proxima-nova-light.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -97,9 +89,7 @@ a.card-link:hover {
     margin-bottom: 0;
     color: #4b4c50;
 }
-.hvr-card p.card-meta .text-muted {
-    font-size: .75em
-}
+
 .hvr-card p.card-meta img {
     max-height: 1.5em;
     max-width: 1.5em;
@@ -158,9 +148,17 @@ a.card-link:hover {
 }
 
 
-.nav-list .cryptopay-home {
+.main-header-1 .nav-list li:first-child {
+    
+    margin-bottom: -6px;
+}
+
+.main-header-1 .nav-list li:first-child::after {
+    content: '';
+    display: inline-block;
     border-right: solid 1px rgba(2, 158, 228, .2);
-    padding-right: 16px;
+    height: 17px;
+    width: 8px;
 }
 
 .nav-list > li > a {
@@ -225,13 +223,11 @@ nav .nav-items li:last-of-type {
 
 .nav-item {
   text-transform: uppercase;
-  font-family: ProximaNova;
-  font-size: 12px;
-  font-weight: 600;
+  font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.17;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.5px;
   text-align: center;
 }
 
@@ -349,9 +345,7 @@ button#contact-form-submit {
 .statuspage .color-dot.none {
     background-color: #7bc84c
 }
-#article {
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-}
+
 #article .note-callout {
     display: block;
     color: #4b4c50;
@@ -436,9 +430,7 @@ button#contact-form-submit {
 #article .tip-callout::before {
     content: '\f075'
 }
-#article a {
-    color: #4b4c50;
-}
+
 #article a:hover {
     cursor: pointer
 }
@@ -573,50 +565,12 @@ button#contact-form-submit {
 #article ol ol li:last-child {
     margin-bottom: 0;
 }
-#article h1,
-#article h2,
-#article h3,
-#article h4 {
-    margin-top: 1em
-}
-.card-title {
-    margin-top: inherit !important
-}
-#article table {
-    border-collapse: collapse;
-    max-width: 100%;
-    width: 100%;
-    empty-cells: show;
-    tfoot: td;
-}
-#article table caption {
-    text-transform: uppercase;
-    padding: 0;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 11px
-}
-#article table td,
-#article table th {
-    border: 1px solid #c8ccd4;
-    padding: 16px 16px 15px
-}
-#article table tfoot th {
-    color: rgba(0, 0, 0, 0.5)
-}
-p#breadcrumbs {
-    margin-top: 15px;
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
-    font-size: 1em;
-    color: #bcc0c8;
-}
-p#breadcrumbs a {
-    color: #bcc0c8;
-    font-weight: bold
-}
-p#breadcrumbs i.fa {
-    color: #bcc0c8;
-    margin: 0 .3em 0 .15em
-}
+
+
+
+
+
+
 #login h1 {
     margin-top: 4em;
     margin-bottom: 1em;
@@ -678,32 +632,19 @@ p#breadcrumbs i.fa {
         padding-right: 5em
     }
 }
-#category h3.category-title {
-    color: #4b4c50;
-    font-size: 1.25em;
-    margin: 1em 0 1em 0;
-    font-weight: bold;
-    font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif !important
-}
+
 #category p.meta {
     margin-top: -1em;
     margin-bottom: 2em
 }
-#category i.fa {
-    color: #4b4c50
-}
+
 #category #articles a.card-link {
     text-decoration: none;
     display: block;
     margin-left: 0 !important
 }
 
-#category #articles p.card-text {
-    color: #4b4c50
-}
-#category #articles .text-muted {
-    font-size: .75em
-}
+
 #category #articles img {
     max-height: 1.5em;
     max-width: 1.5em;
@@ -819,12 +760,8 @@ p#breadcrumbs i.fa {
     color: #bcc0c8;
     display: block
 }
-#related h3 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: .75em;
-    color: #bcc0c8
-}
+
+
 #related ul {
     padding-left: 0
 }
@@ -846,17 +783,7 @@ p#breadcrumbs i.fa {
     display: block;
     margin-left: 0 !important
 }
-#searchresults #articles h3.card-title, #home #categories h3.card-title {
-  font-size: 24px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  text-align: left;
-  color: #333333;
-  text-transform: capitalize;
-}
+
 
 /*
 #footer {
@@ -936,7 +863,12 @@ ul {
 
 div#header {
     background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
 }
+
+
 
 #header {
     margin-top: -100px;
@@ -954,6 +886,7 @@ div#header {
     padding-right: 21px;
 	height: 56px;
     width: 600px;
+    border-color: #f5f5f5;
     border-style: solid;
     border-radius: 4px;
     border-width: 1px;
@@ -994,7 +927,48 @@ div#header {
 }
 
 #instant-search {
-    margin-bottom: 135px;
+    margin-bottom: 15px;
+}
+
+#header {
+    margin-bottom: 96px;
+}
+p
+#hits h3.article-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 22px;
+    margin-bottom: 22px;
+}
+
+/* Непонятно как убрать вато инжект этих hr из html */
+#hits hr {
+    display: none;
+}
+
+#hits > .row::after {
+    position: relative;
+    left: 15px;
+    display: inline-block;
+    content: '';
+    height: 26px;
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#hits > .row:last-child::after {
+    position: relative;
+    left: 15px;
+    display: inline-block;
+    content: '';
+    height: 26px;
+    width: 0%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#hits .article-description {
+    color: #999999;
+    font-size: 14px;
 }
 
 #instant-search .search-icon {
@@ -1018,11 +992,12 @@ div#instant-search label {
     margin-bottom: 13px;
 }
 
-
-.card-title {
+  #categories h3.card-title {
+    font-family: 'ProximaNova-Light', 'ProximaNova-Thin', 'ProximaNova', gill sans, Corbel, Arial, sans-serif;
+    color: #333333;
     font-size: 24px;
-    font-weight: 300;
-    line-height: 1.33;
+    font-weight: normal;
+    line-height: 32px;
     text-transform: capitalize;
 }
 
@@ -1035,41 +1010,110 @@ div#instant-search label {
 .category-card {
     flex-grow: 0;     /* do not grow   - initial value: 0 */
     flex-shrink: 0;   /* do not shrink - initial value: 1 */
-    flex-basis: 288px;
 
-  margin-bottom: 39px;
-  
-  height: 332px;
-
-  border-radius: 4px;
-  box-shadow: 0 3px 2px -1px rgba(140, 140, 140, 0.11);
-  background-color: #ffffff;
-  border: solid 1px #eaeaea;
+    margin-bottom: 39px;
+    height: 332px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #eaeaea;
+    box-shadow: 0 3px 2px -1px rgba(140, 140, 140, 0.11);
 
 }
 
-.category-card:nth-child(4n) {
-    
-}
-.category-card:nth-child(1), .category-card:nth-child(5n) {
-    
+.card-links-list li{
+
+    margin-top: 12px;
 }
 
 .category-card-inner {
-    margin-top: 25px;
-    margin-left: 24px;
-    margin-right: 24px;
-    margin-bottom: 21px;
+    padding-top: 25px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 21px;
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-card-bottom {
+    width: 100%;
+    align-self: flex-end;
 }
 
 .more-hint {
 
     text-transform: uppercase;
     color: rgba(2, 158, 228, 1);
+    font-size: 12px;
+    font-weight: bold;
 
+    display: inline-block;
+    margin-top: 28px
 }
 
+
+#meta #breadcrumbs {
+    font-size: 14px;
+    font-weight: normal;
+    color: #999999;
+    text-align: center;
+}
+
+#category-meta h1 {
+    margin: 8px;
+
+    color: #333333;
+    font-size: 40px;
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+#category-meta {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 106px;
+}
+
+
+#articles .article-item {
+    height: 26px;
+    width: 100%;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#articles .article-item:last-child {
+    height: 26px;
+    width: 100%;
+    border-bottom: 1px solid white;
+}
+
+
+
+#articles .article-row {
+    display: flex;
+}
+
+
+#articles .article-left-chunk {
+    width: 586px;
+}
+
+#articles .article-row h3 {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: normal;
+    color: #333333;
+}
+
+
+
 .main-footer-container {
+    background-color: white;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
 }
@@ -1132,10 +1176,13 @@ div#instant-search label {
 
 /* Inline SVGs */
 
-.logo {
+.logo-icon {
+    display: inline-block;
+    height: 17px;
+    width: 127px;
     background: 
         no-repeat
-        url('data:image/svg+xml;%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%22121%22%20height=%2217%22%20viewBox=%220%200%20121%2017%22%3E%0A%20%20%20%20%0A%20%20%20%20%20%20%20%20%3Cpath%20fill=%22#029ee4%22%20id=%22a%22%20d=%22M0%208.544c0-3.978%202.46-7.4%207.136-7.4%201.77%200%203.172.536%204.656%201.836.548.514.61%201.422.06%201.998-.548.496-1.382.432-1.87-.062-.834-.886-1.686-1.134-2.846-1.134-3.131%200-4.634%202.248-4.634%204.762%200%202.556%201.483%204.906%204.634%204.906%201.16%200%202.237-.474%203.172-1.32.63-.494%201.503-.248%201.87.248.326.452.488%201.216-.223%201.936-1.424%201.34-3.13%201.608-4.82%201.608-4.92%200-7.135-3.4-7.135-7.378zm17.374%205.894c0%201.794-2.704%201.856-2.704.042V2.772c0-.72.55-1.256%201.22-1.256h5.408c5.163%200%206.22%207.008%201.912%208.758l2.703%203.34c1.057%201.588-1.058%203.112-2.277%201.546l-3.07-4.452h-3.192v3.73zm9.899-10.944c-.977-1.32%201.22-2.988%202.277-1.382l3.559%205.38%203.598-5.38c1.077-1.504%203.334%200%202.277%201.382l-4.595%206.74V14.5c0%201.814-2.683%201.772-2.683-.02v-4.246l-4.433-6.74zm13.717-.741c0-.682.529-1.424%201.381-1.424h4.697c2.644%200%205.021%201.794%205.021%205.236%200%203.256-2.377%205.07-5.02%205.07h-3.396v2.72c0%20.908-.57%201.424-1.302%201.424-.67%200-1.38-.516-1.38-1.424V2.753zM57.951%204.09h-3.557c-1.77%200-1.77-2.638%200-2.638h9.616c1.809%200%201.809%202.638%200%202.638h-3.376V14.5c0%201.794-2.683%201.834-2.683%200V4.091zm15.757%2011.892c-3.762.166-7.666-2.37-7.666-7.42%200-5.07%203.904-7.564%207.666-7.564%203.557.186%207.278%202.68%207.278%207.564%200%204.886-3.721%207.42-7.278%207.42zM17.374%208.338h3.924c2.644%200%202.806-4.328%200-4.328h-3.924v4.328zm56.109-4.659c-2.277%200-4.756%201.628-4.756%204.884%200%203.236%202.48%204.886%204.756%204.886%202.338%200%204.84-1.65%204.84-4.886%200-3.256-2.502-4.884-4.84-4.884zm-29.81.248v5.132h3.395c1.362%200%202.44-1.216%202.44-2.494%200-1.442-1.078-2.638-2.44-2.638h-3.395zm39.785-1.174c0-.682.529-1.424%201.381-1.424h4.698c2.643%200%205.02%201.794%205.02%205.236%200%203.256-2.377%205.07-5.02%205.07H86.14v2.72c0%20.908-.57%201.424-1.302%201.424-.67%200-1.38-.516-1.38-1.424V2.753zm11.795%2013.025c-.651-.372-1.057-1.114-.651-1.98l5.836-11.562c.548-1.092%202.012-1.134%202.52%200l5.734%2011.562c.832%201.608-1.628%202.886-2.36%201.278l-.893-1.814h-7.503l-.874%201.814c-.325.702-1.077.846-1.809.702zm12.88-12.284c-.976-1.32%201.22-2.988%202.277-1.382l3.56%205.38%203.598-5.38c1.077-1.504%203.334%200%202.276%201.382l-4.594%206.74V14.5c0%201.814-2.684%201.772-2.684-.02v-4.246l-4.432-6.74zm-21.992.433v5.132h3.396c1.36%200%202.438-1.216%202.438-2.494%200-1.442-1.077-2.638-2.438-2.638H86.14zm17.854%206.615l-2.297-5.09-2.501%205.09h4.798z%22/%3E%0A%3C/svg%3E');
+        url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20xmlns:xlink=%22http://www.w3.org/1999/xlink%22%20width=%22121%22%20height=%2217%22%20viewBox=%220%200%20121%2017%22%3E%3Cpath%20fill=%22#029ee4%22%20id=%22a%22%20d=%22M0%208.544c0-3.978%202.46-7.4%207.136-7.4%201.77%200%203.172.536%204.656%201.836.548.514.61%201.422.06%201.998-.548.496-1.382.432-1.87-.062-.834-.886-1.686-1.134-2.846-1.134-3.131%200-4.634%202.248-4.634%204.762%200%202.556%201.483%204.906%204.634%204.906%201.16%200%202.237-.474%203.172-1.32.63-.494%201.503-.248%201.87.248.326.452.488%201.216-.223%201.936-1.424%201.34-3.13%201.608-4.82%201.608-4.92%200-7.135-3.4-7.135-7.378zm17.374%205.894c0%201.794-2.704%201.856-2.704.042V2.772c0-.72.55-1.256%201.22-1.256h5.408c5.163%200%206.22%207.008%201.912%208.758l2.703%203.34c1.057%201.588-1.058%203.112-2.277%201.546l-3.07-4.452h-3.192v3.73zm9.899-10.944c-.977-1.32%201.22-2.988%202.277-1.382l3.559%205.38%203.598-5.38c1.077-1.504%203.334%200%202.277%201.382l-4.595%206.74V14.5c0%201.814-2.683%201.772-2.683-.02v-4.246l-4.433-6.74zm13.717-.741c0-.682.529-1.424%201.381-1.424h4.697c2.644%200%205.021%201.794%205.021%205.236%200%203.256-2.377%205.07-5.02%205.07h-3.396v2.72c0%20.908-.57%201.424-1.302%201.424-.67%200-1.38-.516-1.38-1.424V2.753zM57.951%204.09h-3.557c-1.77%200-1.77-2.638%200-2.638h9.616c1.809%200%201.809%202.638%200%202.638h-3.376V14.5c0%201.794-2.683%201.834-2.683%200V4.091zm15.757%2011.892c-3.762.166-7.666-2.37-7.666-7.42%200-5.07%203.904-7.564%207.666-7.564%203.557.186%207.278%202.68%207.278%207.564%200%204.886-3.721%207.42-7.278%207.42zM17.374%208.338h3.924c2.644%200%202.806-4.328%200-4.328h-3.924v4.328zm56.109-4.659c-2.277%200-4.756%201.628-4.756%204.884%200%203.236%202.48%204.886%204.756%204.886%202.338%200%204.84-1.65%204.84-4.886%200-3.256-2.502-4.884-4.84-4.884zm-29.81.248v5.132h3.395c1.362%200%202.44-1.216%202.44-2.494%200-1.442-1.078-2.638-2.44-2.638h-3.395zm39.785-1.174c0-.682.529-1.424%201.381-1.424h4.698c2.643%200%205.02%201.794%205.02%205.236%200%203.256-2.377%205.07-5.02%205.07H86.14v2.72c0%20.908-.57%201.424-1.302%201.424-.67%200-1.38-.516-1.38-1.424V2.753zm11.795%2013.025c-.651-.372-1.057-1.114-.651-1.98l5.836-11.562c.548-1.092%202.012-1.134%202.52%200l5.734%2011.562c.832%201.608-1.628%202.886-2.36%201.278l-.893-1.814h-7.503l-.874%201.814c-.325.702-1.077.846-1.809.702zm12.88-12.284c-.976-1.32%201.22-2.988%202.277-1.382l3.56%205.38%203.598-5.38c1.077-1.504%203.334%200%202.276%201.382l-4.594%206.74V14.5c0%201.814-2.684%201.772-2.684-.02v-4.246l-4.432-6.74zm-21.992.433v5.132h3.396c1.36%200%202.438-1.216%202.438-2.494%200-1.442-1.077-2.638-2.438-2.638H86.14zm17.854%206.615l-2.297-5.09-2.501%205.09h4.798z%22/%3E%3C/svg%3E');
 }
 
 .search-icon {

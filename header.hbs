@@ -3,7 +3,10 @@
     <nav class="nav-bar">
       <ul class='nav-list'>
         <li>
-          <a href='https://cryptopay.me/' class='cryptopay-home'>{{config.brand}}</a>
+          <a href='https://cryptopay.me/' class='cryptopay-home'>
+            <span class='visually-hidden'>{{config.brand}}</span>
+            <span class='logo-icon'></span>
+          </a>
         </li>
         <li>
           <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdesk</a>              
@@ -40,12 +43,12 @@
           {{#if meta.languages}}
             <li class="nav-item language-picker">
               <div class="dropdown show">
-                <a id="lang-dropdown" class="dropdown-toggle nav-link" style="text-transform:uppercase;" href data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a id="lang-dropdown" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href>
                   {{meta.language_code}}
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lang-dropdown">
                   {{#each meta.languages}}
-                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}" style="color: #444 !important">
+                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}">
                       {{this.name}}
                     </a>
                   {{/each}}
@@ -64,8 +67,8 @@
 
   <div id="search-container" class="container-fluid">
     
-      <div id="categories" class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6">
+      <div id="categories">
+        
           <div id="instant-search">
             <form action="{{rootPath meta.home_path}}/search" method="GET">
               <label>How can we help?</label>
@@ -75,83 +78,15 @@
               </div>
             </form>
         </div>
-      </div>
+      
     </div>
   </div>
   <div id="searchresults" class="container-fluid">
     <div id="articles" class="row">
-      <div class="col-xs-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="col-xs-12 col-md-9 col-lg-7">
         <div id="hits"></div>
       </div>
     </div>
   </div>
 </div>
 
-
-
-
-
-{{! takes c *models.Category and level int as partial parameters}}
-{{#*inline "sidebar_category"}}
-  <a
-    class="sidebar-category{{#page "category"}}{{#if (eq category.category_id c.category_id)}} current{{/if}}{{/page}}"
-    href="#category-{{c.category_id}}-items"
-    data-toggle="collapse"
-    aria-expanded="false"
-    aria-controls="category-{{c.category_id}}-items"
-  >
-    <p
-      id="category-{{c.category_id}}-title"
-      style="margin-left: {{multiply 0.5 level}}em !important; font-size: {{subtract 1 (multiply 0.05 level)}}em !important;"
-      {{#categoryIsAscendent @root.meta.sidebar_categories category c}}
-        class="expanded"
-      {{/categoryIsAscendent}}
-      onclick="toggleCategoryIcon(event, '{{c.category_id}}')"
-    >
-      {{c.title}}
-    </p>
-  </a>
-  <div
-    id="category-{{c.category_id}}-items"
-    class="collapse{{#categoryIsAscendent @root.meta.sidebar_categories category c}} in {{/categoryIsAscendent}}"
-    data-toggle="collapse"
-  >
-    {{#each (filterCategoriesByParentId @root.meta.sidebar_categories c.category_id)}}
-      {{> sidebar_category c=this level=(add level 1)}}
-    {{/each}}
-    {{#each c.articles}}
-      <a
-        class="sidebar-article{{#page "article"}}{{#if (eq article.article_id this.article_id)}} current{{/if}}{{/page}}"
-        href="{{this.relative_url}}"
-        onclick="window.location.href='{{this.relative_url}}'"
-      >
-        <p style="margin-left: {{multiply 0.5 (add level 1)}}em !important; font-size: {{subtract 1 (multiply 0.05 (add level 1))}} !important;">
-          {{this.title}}
-        </p>
-      </a>
-    {{/each}}
-  </div>
-{{/inline}}
-
-{{#*inline "sidebar"}}
-  
-    <div id="sidebar">
-      {{#each meta.sidebar_categories}}
-        {{#unless this.parent_category_id}}
-          {{> sidebar_category c=this level=0}}
-        {{/unless}}
-      {{/each}}
-    </div>
-    <script>
-      function toggleCategoryIcon (event, category_id) {
-        var $p = $('#category-' + category_id + '-title');
-        if ($p.hasClass('expanded')) {
-          $p.removeClass('expanded');
-        } else {
-          $p.addClass('expanded');
-        }
-      }
-    </script>
-  
-
-{{/inline}}
