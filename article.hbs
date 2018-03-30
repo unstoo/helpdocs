@@ -4,20 +4,24 @@
   }
 </style>
 
-<div id="article-body">
-
-
   <div class='article-breadcrumbs'>
     <p>
       <a href="{{fallback meta.home_path "/"}}">
         {{i18n "all_categories" "All Categories"}}
       </a>
-      &#8203;>&#8203;
+      <span class='strela'>  
+        ›
+      </span>
       {{> categoryBreadcrumbs linkify=true}}
-      &#8203;>&#8203;
+      <span class='strela'>  
+        ›
+      </span>
       {{article.title}}
     </p>
   </div>
+<div id="article-body">
+
+
 
 
   <div>
@@ -36,8 +40,9 @@
           </span>
         {{/if}}
       </p>
-
-      {{{article.body}}}
+      <div class='the-article'>
+        {{{article.body}}}
+      </div>
     </div>
 
     
