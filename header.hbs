@@ -115,13 +115,13 @@
 
 
   {{#page "home"}}
+  
 
     <div class="container-fluid main-header-1">
 
 
 
-
-      <nav class="nav-bar">
+      <nav class="nav-bar" id='articles-header'>
         <ul class='nav-list'>
           <li>
             <a href='https://cryptopay.me/' class='cryptopay-home'>
@@ -190,25 +190,42 @@
           </ul>
         </div>
       </nav>
+
     </div>
 
-
-    <div id="search-container" class="container-fluid">
-      
-        <div id="categories">
-          
-            <div id="instant-search">
-              <form action="{{rootPath meta.home_path}}/search" method="GET">
-                <label>How can we help?</label>
-                <div class='search-input-container'>
-                  <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
-                  <span class="search-icon"></span>
-                </div>
-              </form>
-          </div>
+    <div id='search-mobile-wrapper' class=''>
+      <div id="search-container" class="container-fluid">
         
+          <div id="categories">
+            
+              <div id="instant-search">
+                <form action="{{rootPath meta.home_path}}/search" method="GET">
+                  <label>How can we help?</label>
+                  <div class='search-input-container'>
+                    <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+                    <span class="search-icon"></span>
+                  </div>
+                </form>
+            </div>
+          
+        </div>
       </div>
     </div>
+
+    {{> mobileHamburger }}
+    <div id='hamburger-menu-filler' class='hidden-filler'></div>
+
+    <div id="hamburger-search" class='hidden-search'>
+      <div id='header-for-mobile'>
+        <form action="{{rootPath meta.home_path}}/search" method="GET">
+          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <div class='search-input-container'>
+            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+          </div>
+        </form>
+        </div>
+      </div>  
+
     <div id="searchresults" class="container-fluid">
       <div id="articles" class="row">
         <div class="col-xs-12 col-md-9 col-lg-7">
@@ -334,6 +351,7 @@
     
   {{/page}}
 </div>
+
 <div class="bar-1"></div>
 
 
