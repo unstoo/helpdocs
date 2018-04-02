@@ -855,7 +855,7 @@ div#header {
 }
 
 #instant-search {
-    margin-bottom: 15px;
+    margin-bottom: 48px;
 }
 
 
@@ -963,6 +963,14 @@ div#instant-search label {
     #header .main-header-1 {
         margin-bottom: 20px;
     }
+
+    /* Mobile Header Home.hbs */
+        .nav-list {
+            width: 100%;
+        }
+        .nav-list > li:last-child {
+            margin-left: auto;
+        }
 }
 
 
