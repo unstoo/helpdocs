@@ -1,26 +1,9 @@
-{{#if (gt this.meta.num_authors 0)}}
-                    <p class="card-text">
-                      {{#each this.authors}}
-                        {{#if (lt @index 5)}}
-                          {{#if this.profile_image}}
-                            <img class="img-fluid img-circle" src="{{this.profile_image}}">
-                          {{/if}}
-                        {{/if}}
-                      {{/each}}
-                      <span class="text-muted">
-                        {{this.meta.num_articles}}
-                        {{#if (eq this.meta.num_articles 1)}}
-                          {{i18n "article" "article"}}
-                        {{else}}
-                          {{i18n "articles" "articles"}}
-                        {{/if}}
-                        {{i18n "by" "by"}}
-                        {{this.meta.num_authors}}
-                        {{#if (eq this.meta.num_authors 1)}}
-                          {{i18n "author" "author"}}
-                        {{else}}
-                          {{i18n "authors" "authors"}}
-                        {{/if}}
-                      </span>
-                    </p>
-                  {{/if}}
+<div id="article-instant-search hamburger-search">
+    <form action="{{rootPath meta.home_path}}/search" method="GET">
+      <label class='visually-hidden' for='id-query'>How can we help?</label>
+      <div class='search-input-container'>
+        <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+        <span class="search-icon article-search-icon"></span>
+      </div>
+    </form>
+  </div>

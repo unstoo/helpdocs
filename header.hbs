@@ -1,9 +1,21 @@
 <div id="header">
   {{#page "category"}}
     <div class="container-fluid">
-      {{> mobileHamburger }}
-      <nav id='articles-header'>
 
+      {{> mobileHamburger }}
+
+      <div id='hamburger-menu-filler' class='hidden-filler'></div>
+
+      <div id="hamburger-search">
+        <form action="{{rootPath meta.home_path}}/search" method="GET">
+          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <div class='search-input-container'>
+            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+          </div>
+        </form>
+      </div>  
+
+      <nav id='articles-header'>
 
         <!-- CRYPTOPAY | Helpdesk -->
         <ul class='article-nav-left'>
@@ -15,6 +27,11 @@
           </li>
           <li>
             <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdesk</a>              
+          </li>
+          <li>
+            <button class='hamburger-open-button' id='hamburger-open-button'>
+              <span class="visually-hidden">Open menu</span>
+            </button>
           </li>
         </ul>
 
@@ -29,13 +46,13 @@
           </form>
         </div>  
         
-        <!-- ... LANG | Contact Us -->
+        <!-- Sing In | Sing Up | LANG | Contact Us -->     
         <ul id='nav-list-2'>
 
-          <li lass="nav-item">
+          <li class="nav-item">
             <a href=''>Sign Up</a>
           </li>
-          <li lass="nav-item">
+          <li class="nav-item">
             <a href=''>Sign In</a>
           </li>
 
@@ -195,6 +212,9 @@
   {{#page "article"}}
     <div class="container-fluid">
       {{> mobileHamburger }}
+
+      <div id='hamburger-menu-filler' class='filler-hidden'></div>
+
       <nav id='articles-header'>
 
 
@@ -208,6 +228,11 @@
           </li>
           <li>
             <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdesk</a>              
+          </li>
+          <li>
+            <button class='hamburger-open-button' id='hamburger-open-button'>
+              <span class="visually-hidden">Open menu</span>
+            </button>
           </li>
         </ul>
 
@@ -296,7 +321,7 @@
 
 
 {{#*inline "mobileHamburger"}}
-  <nav class='hamburger-menu'>
+  <nav class='hamburger-menu hamburger-menu-hidden' id='hamburger-menu'>
     <header>
       <ul>
           <li>
@@ -309,54 +334,51 @@
             <a href='https://cryptopay.helpdocs.io' class='cryptopay-helpdesk'>Helpdesk</a>              
           </li>
         </ul>
-        <button>
-          X
+        <button class='hamburger-close-button' id='hamburger-close-button'>
           <span class='visually-hidden'>Close Menu</span>
         </button>
     </header>
     <ul class='hamburger-nav-list'>
 
+      <li class="nav-item">
+        <a href=''>Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href=''>Sign In</a>
+      </li>
+
+      {{#if config.nav_items}}
+        {{#each config.nav_items}}
           <li class="nav-item">
-            <a href=''>Sign Up</a>
+            <a class="contact-us" href="{{this.href}}" target="{{fallback this.target "_blank"}}">
+              {{this.title}}
+            </a>
           </li>
-          <li class="nav-item">
-            <a href=''>Sign In</a>
-          </li>
+        {{/each}}
+      {{/if}}
 
-          {{#if config.nav_items}}
-            {{#each config.nav_items}}
-              <li class="nav-item">
-                <a class="contact-us" href="{{this.href}}" target="{{fallback this.target "_blank"}}">
-                  {{this.title}}
-                </a>
-              </li>
-            {{/each}}
-          {{/if}}
-
-          <li class="nav-item">
-            {{> contactLink class='contact-us-btn-hamburger'}}
-          </li>
+      <li class="nav-item">
+        {{> contactLink class='contact-us-btn-hamburger'}}
+      </li>
 
 
-          {{#if meta.languages}}
-            <li class="nav-item">
-                <p class='language-label'>Language</p>
-                
-                <ul>
-                
-                  {{#each meta.languages}}
-                   <li> 
-                      <a href="{{rootPath meta.home_path}}/l/{{this.code}}">
-                        {{this.name}}
-                      </a>
-                    </li>
-                  {{/each}}
-                </ul>
-              </div>
-            </li>
-          {{/if}}
-
-          
-        </ul>
+      {{#if meta.languages}}
+        <li class="nav-item">
+            <p class='language-label'>Language</p>
+            
+            <ul>
+            
+              {{#each meta.languages}}
+                <li> 
+                  <a href="{{rootPath meta.home_path}}/l/{{this.code}}">
+                    {{this.name}}
+                  </a>
+                </li>
+              {{/each}}
+            </ul>
+          </div>
+        </li>
+      {{/if}} 
+    </ul>
   </nav>
 {{/inline}}
