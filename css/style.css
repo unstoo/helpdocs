@@ -1217,6 +1217,7 @@ div#instant-search label {
     }
     .article-nav-left {
         margin-bottom: 20px;
+        width: 100%;
     }
     .article-nav-left li:nth-child(2) {
         font-size: 12px;
@@ -1563,6 +1564,8 @@ div#instant-search label {
         padding: 0;
     }
     .hamburger-open-button {
+
+        display: block;
         background: transparent;
         border: none;
         background-image:
@@ -1571,6 +1574,7 @@ div#instant-search label {
         height: 16px;
         width: 20px;
         padding: 0;
+        margin-left: auto;
     }
 
     .hamburger-menu > header > ul {
