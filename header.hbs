@@ -209,14 +209,23 @@
   {{/page}}
 
 
-  {{#page "article"}}
+   {{#page "article"}}
     <div class="container-fluid">
+
       {{> mobileHamburger }}
 
-      <div id='hamburger-menu-filler' class='filler-hidden'></div>
+      <div id='hamburger-menu-filler' class='hidden-filler'></div>
+
+      <div id="hamburger-search" class='hidden-search'>
+        <form action="{{rootPath meta.home_path}}/search" method="GET">
+          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <div class='search-input-container'>
+            <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
+          </div>
+        </form>
+      </div>  
 
       <nav id='articles-header'>
-
 
         <!-- CRYPTOPAY | Helpdesk -->
         <ul class='article-nav-left'>
@@ -236,7 +245,6 @@
           </li>
         </ul>
 
-
         <!-- Searchbar -->
         <div id="article-instant-search">
           <form action="{{rootPath meta.home_path}}/search" method="GET">
@@ -248,9 +256,7 @@
           </form>
         </div>  
         
-        <!-- ... LANG | Contact Us -->
-        
-        
+        <!-- Sing In | Sing Up | LANG | Contact Us -->     
         <ul id='nav-list-2'>
 
           <li class="nav-item">

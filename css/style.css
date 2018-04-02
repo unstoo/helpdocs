@@ -4,6 +4,12 @@ h2,h3,h4 {
     font-weight: 300;
     line-height: 1.5;
 }
+#hamburger-search {
+    display: none;
+}
+.hamburger-open-button {
+    display: none;
+}
 .the-article h2, .the-article h3, .the-article h4 {
     margin-bottom: 1.3rem;
     color: #333;
@@ -177,7 +183,6 @@ a.card-link:hover {
     display: flex;
     align-items: center;
     min-width: 256px;
-    width: 100%;
 }
 
 @media only screen and (max-width: 1123px) {
