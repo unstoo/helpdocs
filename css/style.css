@@ -328,7 +328,7 @@ nav .navbar-brand img.logo {
 #article .tip-callout::before {
     margin-left: 1em;
     margin-right: .75em;
-    font-family: FontAwesome
+    font-family: 'Nunito Sans', gill sans, Corbel, Arial, sans-serif;
 }
 #article .tip-callout a {
     color: #0482b4;
@@ -402,7 +402,7 @@ nav .navbar-brand img.logo {
     background-color: #89aadc;
     /* <Customizable> */
 
-    font-family: "Lato", "Helvetica Neue" Arial, sans-serif;
+    font-family: 'Nunito Sans', gill sans, Corbel, Arial, sans-serif;
     text-align: center;
 }
 #article ol ol > li:before {
@@ -550,6 +550,8 @@ nav .navbar-brand img.logo {
     margin-bottom: 80px;
     justify-content: center;
 }
+
+
 
 #article-body .author-img {
     border-radius: 50%;
@@ -713,6 +715,8 @@ nav .navbar-brand img.logo {
 }
 #searchresults #articles {
     margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 #searchresults #articles a.card-link {
     text-decoration: none;
@@ -861,9 +865,12 @@ div#header {
 
 #hits h3.article-title {
     font-size: 18px;
-    font-weight: bold;
-    margin-top: 22px;
-    margin-bottom: 22px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #333;
+    font-family: 'Nunito Sans', gill sans, Corbel, Arial, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 6px;
 }
 
 /* Непонятно как убрать aвто инжект hr из html */
@@ -876,19 +883,16 @@ div#header {
     left: 15px;
     display: inline-block;
     content: '';
-    height: 26px;
+    height: 22px;
+    margin-bottom: 22px;
     width: 100%;
     border-bottom: 1px solid #eaeaea;
 }
 
 #hits > .row:last-child::after {
-    position: relative;
-    left: 15px;
-    display: inline-block;
     content: '';
-    height: 26px;
-    width: 0%;
-    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 90px;
+    border-bottom: transparent;
 }
 
 #hits .article-description {
@@ -913,13 +917,13 @@ div#instant-search label {
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.33;
+    line-height: 48px;
     letter-spacing: normal;
     text-align: left;
     color: #333333;
     
     display: block;
-    margin-bottom: 13px;
+    margin-bottom: 20px;
 }
 
 /* Header Mobile Home.hbs */
@@ -961,7 +965,7 @@ div#instant-search label {
 }
 
 
-@media only screen and (max-width: 386px) {
+@media only screen and (max-width: 540px) {
     #header input {
         width: 100%;
         height: 48px;
@@ -1113,6 +1117,7 @@ div#instant-search label {
         min-height: 420px
     }
 }
+
 .category-card-bottom {
     width: 100%;
 }
@@ -1131,19 +1136,22 @@ div#instant-search label {
 
 
 /* Mobile */
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 540px) {
     .category-card-inner {
         padding-left: 25px;
         padding-right: 20px;
-        min-height: 320px;
+        min-height: 150px;
 
         font-size: 16px;
     }
     .category-card {
-        min-height: 300px;
+        min-height: 150px;
     }
     .more-hint {
         font-size: 15px;
+    }
+    #home {
+        margin-bottom: 10px;
     }
 }
 
@@ -1205,7 +1213,7 @@ div#instant-search label {
     margin: 0;
 
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 400;
     color: #333333;
 }
 
@@ -1254,7 +1262,7 @@ div#instant-search label {
 }
 
 /* Mobile Subcategories List - Articles List - Article(s)-Header */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 540px) {
     .container-fluid {
         margin: 0;
         padding: 0;
@@ -1323,6 +1331,7 @@ div#instant-search label {
 
     #articles .article-item {
         margin-bottom: 24px;
+        padding-bottom: 10px;
     }
 
     #articles .article-row {
@@ -1350,25 +1359,33 @@ div#instant-search label {
         margin-bottom: 0;
     }
     #subcategories {
-        margin-bottom: 91px;
+        margin-bottom: 25px;
     }
 
 }
 
 /* Single Article Mobile */
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 540px) {
     #article-body {
         width: 100%;
         text-align: left;
     }
     .article-breadcrumbs {
         text-align: left;
-        margin-bottom: 47px;
+        margin-bottom: 55px;
     }
     #article-body h1 {
         font-size: 34px;
         line-height: 42px;
         font-weight: 300;
+    }
+
+    #article-body .author-container {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 65px;
+        justify-content: center;
     }
 
     #article-body #feedback {
@@ -1387,6 +1404,9 @@ div#instant-search label {
     }
     .article-breadcrumbs {
         margin-top: 0;
+    }
+    .bar-2 {
+        margin-top: 40px;
     }
 }
 
@@ -1495,7 +1515,7 @@ div#instant-search label {
     }
 }
 
-@media only screen and (max-width: 386px) {
+@media only screen and (max-width: 420px) {
 
     .services-list {
         width: 250px;
@@ -1519,7 +1539,7 @@ div#instant-search label {
     text-align: left;
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 540px) {
     #articles-header {
         display: flex;
         flex-wrap: wrap;
