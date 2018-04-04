@@ -261,11 +261,16 @@ nav .spacer {
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 760px) {
     nav .nav-items li {
         display: none
     }
+    nav .navbar-brand b {
+        display: none
+    }
 }
+    
+
 nav .nav-items li.language-picker,
 nav .nav-items li:last-of-type {
     display: -webkit-box;
@@ -315,11 +320,9 @@ nav .nav-items li:last-of-type {
 nav .navbar-brand b {
     color: #ecf1fa;
 }
-@media (max-width: 767px) {
-    nav .navbar-brand b {
-        display: none
-    }
-}
+
+
+
 nav .navbar-brand img.logo {
     height: 40px;
     margin-right: 5px
@@ -854,6 +857,7 @@ div#header {
 }
 
 .search-input-container {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -900,16 +904,20 @@ div#header {
     font-size: 14px;
 }
 
-#instant-search .search-icon {
+#instant-search {
     position: relative;
+}
+
+#instant-search .search-icon {
+    position: absolute;
     z-index: 2;
-    right: 44px;
+    left: calc(600px - 36px);
 }
 
 #article-instant-search .article-search-icon {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    right: 39px;
+    right: 12px;
 }
 
 div#instant-search label {
@@ -1030,11 +1038,6 @@ div#instant-search label {
         }
 }
 
-
-
-
-
-
 #categories h3.card-title {
     color: #333333;
     font-size: 24px;
@@ -1083,41 +1086,6 @@ div#instant-search label {
     flex-direction: column;
     justify-content: space-between;
 }
-
-
-
-/* Карточки с категорями в хоум */
-@media only screen and (max-width: 1052px) {
-    .col-md-3 {
-        position: relative;
-        padding-right: 6px;
-        padding-left: 6px;
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 980px) {
-    .category-card-inner {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-}
-@media only screen and (max-width: 920px) {
-    .col-md-3 {
-        padding-right: 4px;
-        padding-left: 4px;
-    }
-}
-@media only screen and (max-width: 918px) {
-    .category-card-inner {
-        min-height: 400px
-    }
-}
-@media only screen and (max-width: 880px) {
-    .category-card-inner {
-        min-height: 420px
-    }
-}
-
 .category-card-bottom {
     width: 100%;
 }
@@ -1135,6 +1103,116 @@ div#instant-search label {
 }
 
 
+
+
+
+/* Карточки с категорями и header @ Home.hbs */
+@media only screen and (max-width: 1052px) {
+    .col-md-3 {
+        position: relative;
+        padding-right: 6px;
+        padding-left: 6px;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 980px) {
+    .category-card-inner {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+@media only screen and (max-width: 920px) {
+    .category-card-inner {
+        min-height: 400px
+    }
+}
+@media only screen and (max-width: 880px) {
+    .category-card-inner {
+        min-height: 420px
+    }
+}
+/* Tablet-ka */
+@media only screen and (max-width: 760px) {
+    #header input {
+        width: 100%;
+        height: 48px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        background:
+        #f5f5f5f5
+        no-repeat
+        url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%3E%0A%20%20%20%20%3Cpath%20fill=%22#999%22%20fill-rule=%22evenodd%22%20d=%22M22%2020.682L20.682%2022l-6.474-6.474c-1.566%201.26-3.399%201.89-5.5%201.89-2.406%200-4.459-.85-6.159-2.549C.85%2013.167%200%2011.115%200%208.708%200%206.302.85%204.25%202.55%202.55%204.25.85%206.301%200%208.707%200c2.407%200%204.46.85%206.16%202.55%201.699%201.7%202.549%203.752%202.549%206.158%200%202.063-.63%203.877-1.891%205.443L22%2020.682zM3.208%2014.266c1.49%201.49%203.323%202.234%205.5%202.234%202.14%200%203.973-.764%205.5-2.292%201.528-1.527%202.292-3.36%202.292-5.5%200-2.139-.764-3.972-2.292-5.5-1.527-1.527-3.36-2.291-5.5-2.291-2.139%200-3.972.764-5.5%202.291C1.681%204.736.917%206.57.917%208.708c0%202.177.764%204.03%202.291%205.558z%22/%3E%0A%3C/svg%3E');
+        background-position-y: 50%;
+        background-position-x: calc(100% - 12px);
+    }
+    #header-for-mobile input {
+        width: 100%;
+        height: 48px;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        background:
+        #f5f5f5f5
+        no-repeat
+        url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%3E%0A%20%20%20%20%3Cpath%20fill=%22#999%22%20fill-rule=%22evenodd%22%20d=%22M22%2020.682L20.682%2022l-6.474-6.474c-1.566%201.26-3.399%201.89-5.5%201.89-2.406%200-4.459-.85-6.159-2.549C.85%2013.167%200%2011.115%200%208.708%200%206.302.85%204.25%202.55%202.55%204.25.85%206.301%200%208.707%200c2.407%200%204.46.85%206.16%202.55%201.699%201.7%202.549%203.752%202.549%206.158%200%202.063-.63%203.877-1.891%205.443L22%2020.682zM3.208%2014.266c1.49%201.49%203.323%202.234%205.5%202.234%202.14%200%203.973-.764%205.5-2.292%201.528-1.527%202.292-3.36%202.292-5.5%200-2.139-.764-3.972-2.292-5.5-1.527-1.527-3.36-2.291-5.5-2.291-2.139%200-3.972.764-5.5%202.291C1.681%204.736.917%206.57.917%208.708c0%202.177.764%204.03%202.291%205.558z%22/%3E%0A%3C/svg%3E');
+        background-position-y: 50%;
+        background-position-x: calc(100% - 12px);
+    }
+    div#instant-search label {
+        display: none;
+    }
+    #instant-search .search-icon {
+        display: none;
+    }
+    .bar-1 {
+        height: 1px;
+        border-bottom: 1px solid #f5f5f5;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+    .cryptopay-helpdesk {
+        font-size: 12px;
+    }
+    #header .spacer {
+        display: none;
+    }
+    #header .nav-items{
+        display: none;
+    }
+    #header .main-header-1 {
+        margin-bottom: 20px;
+    }
+
+    /* Tablet Header Home.hbs */
+        .nav-list {
+            width: 100%;
+        }
+        .nav-list > li:last-child {
+            margin-left: auto;
+        }
+        #instant-search {
+            margin-bottom: 0;
+        }
+        div#header {
+            margin-bottom: 26px;
+        }
+    /* Tablet Categories grid and cards @ Home.hbs */
+    .category-card-inner {
+        min-height: 280px;
+    }
+    .category-card {
+        min-height: 280px;
+        margin-bottom: 34px;
+    }
+    #home #categories {
+        padding-bottom: 0;
+    }
+}
 /* Mobile */
 @media only screen and (max-width: 540px) {
     .category-card-inner {
@@ -1260,6 +1338,110 @@ div#instant-search label {
     font-weight: 300;
     margin-bottom: .1rem;
 }
+
+/* Tablet @ Category.hbs & Article.hbs */
+@media only screen and (max-width: 760px) {
+    .container-fluid {
+        margin: 0;
+        padding: 0;
+    }
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #content {
+        overflow: hidden;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    div#header {
+        margin: 0;
+        margin-bottom: 5px;
+        padding-left: 16px;
+        padding-right: 16px;
+
+    }
+    .article-nav-left {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .article-nav-left li:nth-child(2) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+    .article-nav-left li:last-child {
+        margin-left: auto;
+    }
+    #article-instant-search {
+        width: 100%;
+    }
+    #article-instant-search #hd-query {
+        width: 100%;
+    }
+    #article-instant-search input {
+        width: 100%;
+        height: 48px;
+
+        font-size: 16px;
+        font-weight: 300;
+
+        background:
+        #f5f5f5f5
+        no-repeat
+        url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%3E%0A%20%20%20%20%3Cpath%20fill=%22#999%22%20fill-rule=%22evenodd%22%20d=%22M22%2020.682L20.682%2022l-6.474-6.474c-1.566%201.26-3.399%201.89-5.5%201.89-2.406%200-4.459-.85-6.159-2.549C.85%2013.167%200%2011.115%200%208.708%200%206.302.85%204.25%202.55%202.55%204.25.85%206.301%200%208.707%200c2.407%200%204.46.85%206.16%202.55%201.699%201.7%202.549%203.752%202.549%206.158%200%202.063-.63%203.877-1.891%205.443L22%2020.682zM3.208%2014.266c1.49%201.49%203.323%202.234%205.5%202.234%202.14%200%203.973-.764%205.5-2.292%201.528-1.527%202.292-3.36%202.292-5.5%200-2.139-.764-3.972-2.292-5.5-1.527-1.527-3.36-2.291-5.5-2.291-2.139%200-3.972.764-5.5%202.291C1.681%204.736.917%206.57.917%208.708c0%202.177.764%204.03%202.291%205.558z%22/%3E%0A%3C/svg%3E');
+        background-position-y: 50%;
+        background-position-x: calc(100% - 12px);
+    }
+    #article-instant-search .article-search-icon {
+        display: none;
+    }
+    
+    #category-meta h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+    #nav-list-2 {
+        display: none;
+    }
+    #category {
+        width: 100%;
+    }
+
+    #articles .article-item {
+        margin-bottom: 24px;
+        padding-bottom: 10px;
+    }
+
+    #articles .article-row {
+        flex-direction: column;
+    }
+
+ 
+  
+
+    #articles h3 {
+        line-height: 150%;
+    }
+
+    #subcategories > ul {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    #subcategories .subcategory-card a {
+        margin: 0;
+        margin-bottom: 20px;
+        width: 100%;
+        min-height: 168px;
+    }
+    #subcategories .subcategory-card:last-child a {
+        margin-bottom: 0;
+    }
+    #subcategories {
+        margin-bottom: 25px;
+    }
+
+}
+
 
 /* Mobile Subcategories List - Articles List - Article(s)-Header */
 @media only screen and (max-width: 540px) {
@@ -1539,7 +1721,7 @@ div#instant-search label {
     text-align: left;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 760px) {
     #articles-header {
         display: flex;
         flex-wrap: wrap;
