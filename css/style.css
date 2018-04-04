@@ -10,7 +10,9 @@ h2,h3,h4 {
 .hamburger-open-button {
     display: none;
 }
-.the-article h2, .the-article h3, .the-article h4 {
+.the-article h2,
+.the-article h3,
+.the-article h4 {
     margin-bottom: 1.3rem;
     color: #333;
     line-height: 1.6;
@@ -53,44 +55,7 @@ a.card-link {
 a.card-link:hover {
     text-decoration: none
 }
-.hvr-card {
-    background-color: #fefeff;
-    border: 1px solid #bcc0c8 !important;
-    border-radius: 2px;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    -ms-box-shadow: 0 0 1px transparent;
-    box-shadow: 0 0 1px transparent;
-    transition-duration: .3s;
-    transition-property: box-shadow, border-color, background-color;
-}
-.hvr-card:hover,
-.hvr-card:focus,
-.hvr-card:active {
-    border-color: #88a9de;
-    background-color: #f8f9fb;
-    -ms-box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.35);
-    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.35)
-}
-.hvr-card i.card-icon {
-    color: #bcc0c8;
-    text-align: center;
-    display: block;
-    margin: .5em 0
-}
 
-.hvr-card p.card-meta {
-    margin-top: .5em;
-    margin-bottom: 0;
-    color: #4b4c50;
-}
-
-.hvr-card p.card-meta img {
-    max-height: 1.5em;
-    max-width: 1.5em;
-    display: inline;
-    margin-right: .5em
-}
 @media only screen and (min-width: 481px) {
     .flex-row.row {
         display: -webkit-box;
