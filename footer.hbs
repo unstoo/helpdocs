@@ -256,8 +256,22 @@
     </div>
     <div class='copyright-text'>
         <p>
-            Cryptopay Ltd is a company registered in England and Wales registration number 08730592.<br>
-            For the purpose of the Data Protection Act 1998, Cryptopay Ltd is registered the ICO with number ZA029520.
+            {{#if (eq meta.language_code 'en')}}
+                Cryptopay Ltd is a company registered in England and Wales registration number 08730592.<br>
+                For the purpose of the Data Protection Act 1998, Cryptopay Ltd is registered the ICO with number ZA029520.
+            {{/if}}
+            {{#if (eq meta.language_code 'de')}}
+                Cryptopay Ltd ist ein Unternehmen registriert in England und Wales Registriernummer 08730592.<br>
+                Für die Zwecke der Data Protection Act 1998, Cryptopay Ltd mit ICO mit Nummer ZA029520 registriert ist.
+            {{/if}}
+            {{#if (eq meta.language_code 'fr')}}
+                Cryptopay Ltd is a company registered in England and Wales registration number 08730592.<br>
+                For the purpose of the Data Protection Act 1998, Cryptopay Ltd is registered the ICO with number ZA029520.
+            {{/if}}
+            {{#if (eq meta.language_code 'it')}}
+                Cryptopay Ltd is a company registered in England and Wales registration number 08730592.<br>
+                For the purpose of the Data Protection Act 1998, Cryptopay Ltd is registered the ICO with number ZA029520.
+            {{/if}} 
         </p>
         <p>
             © 2013–2018, Cryptopay
