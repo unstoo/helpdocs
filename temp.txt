@@ -1,9 +1,0 @@
-<div id="article-instant-search hamburger-search">
-    <form action="{{rootPath meta.home_path}}/search" method="GET">
-      <label class='visually-hidden' for='id-query'>How can we help?</label>
-      <div class='search-input-container'>
-        <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
-        <span class="search-icon article-search-icon"></span>
-      </div>
-    </form>
-  </div>
