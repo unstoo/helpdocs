@@ -498,20 +498,18 @@ nav .navbar-brand img.logo {
     font-size: 16px;
 }
 
-#related-articles ul {
-    list-style-type: none;
-}
 
-#article-body ul {
+
+.the-article ul {
     padding: .2rem 0 .8rem;
     list-style-type: circle;
     font-weight: 300;
 }
-#article-body ol {
+.the-article ol {
     padding: .2rem 0 .8rem;
     font-weight: 300;
 }
-#article-body  li {
+.the-article  li {
     padding-bottom: .4rem;
 }
 
