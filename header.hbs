@@ -8,7 +8,20 @@
 
       <div id="hamburger-search" class='hidden-search non-home'>
         <form action="{{rootPath meta.home_path}}/search" method="GET">
-          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <label class='visually-hidden' for='id-query'>
+            {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+          </label>
           <div class='search-input-container'>
             <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
           </div>
@@ -38,7 +51,20 @@
         <!-- Searchbar -->
         <div id="article-instant-search">
           <form action="{{rootPath meta.home_path}}/search" method="GET">
-            <label class='visually-hidden' for='id-query'>How can we help?</label>
+            <label class='visually-hidden' for='id-query'>
+              {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+            </label>
             <div class='search-input-container'>
               <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
               <span class="search-icon article-search-icon"></span>
@@ -200,7 +226,20 @@
             
               <div id="instant-search">
                 <form action="{{rootPath meta.home_path}}/search" method="GET">
-                  <label>How can we help?</label>
+                  <label>
+                    {{#if (eq meta.language_code 'en')}}
+                        How can we help?
+                    {{/if}}
+                    {{#if (eq meta.language_code 'de')}}
+                        Womit können wir Ihnen helfen?
+                    {{/if}}
+                    {{#if (eq meta.language_code 'fr')}}
+                        Comment pouvons nous aider?
+                    {{/if}}
+                    {{#if (eq meta.language_code 'it')}}
+                        Come possiamo aiutarti
+                    {{/if}}
+                  </label>
                   <div class='search-input-container'>
                     <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
                     <span class="search-icon"></span>
@@ -218,7 +257,20 @@
     <div id="hamburger-search" class='hidden-search'>
       <div id='header-for-mobile'>
         <form action="{{rootPath meta.home_path}}/search" method="GET">
-          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <label class='visually-hidden' for='id-query'>
+            {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+          </label>
           <div class='search-input-container'>
             <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
           </div>
@@ -246,7 +298,20 @@
 
       <div id="hamburger-search" class='hidden-search'>
         <form action="{{rootPath meta.home_path}}/search" method="GET">
-          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <label class='visually-hidden' for='id-query'>
+            {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+          </label>
           <div class='search-input-container'>
             <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
           </div>
@@ -276,7 +341,20 @@
         <!-- Searchbar -->
         <div id="article-instant-search">
           <form action="{{rootPath meta.home_path}}/search" method="GET">
-            <label class='visually-hidden' for='id-query'>How can we help?</label>
+            <label class='visually-hidden' for='id-query'>
+              {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+            </label>
             <div class='search-input-container'>
               <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
               <span class="search-icon article-search-icon"></span>
@@ -360,7 +438,20 @@
 
       <div id="hamburger-search" class='hidden-search'>
         <form action="{{rootPath meta.home_path}}/search" method="GET">
-          <label class='visually-hidden' for='id-query'>How can we help?</label>
+          <label class='visually-hidden' for='id-query'>
+            {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+          </label>
           <div class='search-input-container'>
             <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
           </div>
@@ -390,7 +481,20 @@
         <!-- Searchbar -->
         <div id="article-instant-search">
           <form action="{{rootPath meta.home_path}}/search" method="GET">
-            <label class='visually-hidden' for='id-query'>How can we help?</label>
+            <label class='visually-hidden' for='id-query'>
+              {{#if (eq meta.language_code 'en')}}
+                  How can we help?
+              {{/if}}
+              {{#if (eq meta.language_code 'de')}}
+                  Womit können wir Ihnen helfen?
+              {{/if}}
+              {{#if (eq meta.language_code 'fr')}}
+                  Comment pouvons nous aider?
+              {{/if}}
+              {{#if (eq meta.language_code 'it')}}
+                  Come possiamo aiutarti
+              {{/if}}
+            </label>
             <div class='search-input-container'>
               <input id="hd-query" name="query" placeholder="{{i18n "help_me_with" "Search support"}}">
               <span class="search-icon article-search-icon"></span>

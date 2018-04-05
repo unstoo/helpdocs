@@ -1,40 +1,240 @@
     <div class="bar-2"></div>
 {{> hdFooter}}
-<footer class='main-footer'>
+<footer class='main-footer {{meta.language_code}}'>
     <div class='main-footer-container'>
         <div class="footer-left-chunk">
             <section>
-                <h2>Services</h2>
+                <h2>
+                    {{#if (eq meta.language_code 'en')}}
+                        Services
+                    {{/if}}
+                    {{#if (eq meta.language_code 'de')}}
+                        Bedienungen
+                    {{/if}}
+                    {{#if (eq meta.language_code 'fr')}}
+                        Services
+                    {{/if}}
+                    {{#if (eq meta.language_code 'it')}}
+                        Servizi
+                    {{/if}}
+                </h2>
                 <ul class='footer-list services-list'>
                 <div>
-                    <li><a href='#'>Prepaid Card</a></li>
-                    <li><a href='#'>Bitcoin Wallet</a></li>
-                    <li><a href='#'>Buy Bitcoins</a></li>
-                    <li><a href='#'>Referral Program</a></li>
+                    <li><a href='https://cryptopay.me/bitcoin-debit-card'>
+                        {{#if (eq meta.language_code 'en')}}
+                            Prepaid Card
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Bitcoin Prepaidkarte
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Carte Prépayée
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Carta prepagata
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/bitcoin-wallet'>
+                        
+                        {{#if (eq meta.language_code 'en')}}
+                            Bitcoin Wallet
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Bitcoin Wallet
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Portefeuille Bitcoin
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Portafoglio Bitcoin
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/buy-bitcoins'>
+                        {{#if (eq meta.language_code 'en')}}
+                            Buy Bitcoins
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Bitcoin Kaufen
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Acheter Bitcoin
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Comprare Bitcoin
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/'>  
+                        {{#if (eq meta.language_code 'en')}}
+                            Referral Program
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            ---
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Programme de recommandation
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Programma di riferimento
+                        {{/if}}
+                    </a></li>
                 </div>
                 <div>
-                    <li><a href='#'>Bitcoin transfers</a></li>
-                    <li><a href='#'>Accept bitcoins</a></li>
-                    <li><a href='#'>Gift Cards</a></li>
-                    <li><a href='#'>Loans</a></li>
+                    <li><a href='https://cryptopay.me/bitcoin-international-transfers'>
+                        {{#if (eq meta.language_code 'en')}}
+                            Bitcoin transfers
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Bitcoin Übertragungen
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Transferts Bitcoin
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Trasferimenti Bitcoin
+                        {{/if}}
+                    </a></li>
+                    <li>
+                        <a href='https://cryptopay.me/accept-bitcoins'>
+                        {{#if (eq meta.language_code 'en')}}
+                            Accept bitcoins
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Bitcoins Akzeptieren
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Accepter Bitcoin
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Accettare Bitcoin
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/gift-cards'>
+                        
+                        {{#if (eq meta.language_code 'en')}}
+                            Gift Cards
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Geschenkkarten
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Cartes cadeaux
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Carte regalo
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/bitcoin-loans'>
+                        
+                        {{#if (eq meta.language_code 'en')}}
+                            Loans
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Kredite
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Prêts
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Prestiti
+                        {{/if}}
+                    </a></li>
                 </div>
                 </ul>
             </section>
 
             <section>
-                <h2>Info</h2>
+                <h2>
+                    {{#if (eq meta.language_code 'en')}}
+                        Info
+                    {{/if}}
+                    {{#if (eq meta.language_code 'de')}}
+                        Info
+                    {{/if}}
+                    {{#if (eq meta.language_code 'fr')}}
+                        Info
+                    {{/if}}
+                    {{#if (eq meta.language_code 'it')}}
+                        Informazioni
+                    {{/if}}
+                </h2>
                 <ul class='footer-list'>
-                    <li><a href='#'>Company</a></li>
-                    <li><a href='#'>Careers</a></li>
-                    <li><a href='#'>API</a></li>
-                    <li><a href='#'>Legal</a></li>
+                    <li><a href='https://cryptopay.me/about'>
+                        {{#if (eq meta.language_code 'en')}}
+                            Company
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Unternehmen
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Enterprise
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Azienda
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/careers'>
+                        
+                        {{#if (eq meta.language_code 'en')}}
+                            Careers
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Karriere
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Carrières
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Carriere
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://developers.cryptopay.me/'>
+                        {{#if (eq meta.language_code 'en')}}
+                            API
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            API
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            API
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            API
+                        {{/if}}
+                    </a></li>
+                    <li><a href='https://cryptopay.me/legal/user_agreement'>  
+                        {{#if (eq meta.language_code 'en')}}
+                            Legal
+                        {{/if}}
+                        {{#if (eq meta.language_code 'de')}}
+                            Legal
+                        {{/if}}
+                        {{#if (eq meta.language_code 'fr')}}
+                            Légal
+                        {{/if}}
+                        {{#if (eq meta.language_code 'it')}}
+                            Legale
+                        {{/if}}
+                    </a></li>
                 </ul>
             </section>
         </div>
 
 
         <section>
-            <h2>Social</h2>
+            <h2>
+                {{#if (eq meta.language_code 'en')}}
+                    Social
+                {{/if}}
+                {{#if (eq meta.language_code 'de')}}
+                    Soziale
+                {{/if}}
+                {{#if (eq meta.language_code 'fr')}}
+                    Réseaux Sociaux
+                {{/if}}
+                {{#if (eq meta.language_code 'it')}}
+                    Sociale
+                {{/if}}
+            </h2>
             <ul class='socials-list'>
                 <li><a href='https://medium.com/cryptopay/'>
                     <span class='visually-hidden medium-icon'>Medium</span><span class='social-icon medium-icon'></span>
@@ -64,3 +264,4 @@
         </p>
     </div>
 </footer>
+

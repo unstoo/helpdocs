@@ -4,6 +4,14 @@ h2,h3,h4 {
     font-weight: 300;
     line-height: 1.5;
 }
+.card-title {
+    color: #333;
+}
+.card {
+    border: none;
+    border-bottom: solid 1px #999;
+    border-radius: 0;
+}
 #hamburger-search {
     display: none;
 }
@@ -662,7 +670,7 @@ nav .navbar-brand img.logo {
     color: #4b4c50
 }
 #searchresults #articles {
-    margin-top: 15px;
+    margin-top: 24px;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -1205,7 +1213,7 @@ div#instant-search label {
         height: 1px;
         border-bottom: 1px solid #f5f5f5;
         width: 100%;
-        margin-bottom: 35px;
+        margin-bottom: 42px;
     }
     .cryptopay-helpdesk {
         font-size: 12px;
@@ -1336,7 +1344,6 @@ div#instant-search label {
     }
     div#header {
         margin: 0;
-        margin-bottom: 5px;
         padding-left: 16px;
         padding-right: 16px;
 
