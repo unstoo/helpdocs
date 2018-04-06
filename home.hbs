@@ -13,14 +13,15 @@
               <div class='category-card-bottom'>
                 <ul class='card-links-list'>
                   {{#each this.articles}} 
-                    {{#if (lt @index 2)}} 
+                    {{#if this.is_featured}} 
                       <li> <a href='{{this.relative_url}}'>{{this.title}}</a></li>  
                     {{/if}}
                   {{/each}}
                 </ul>
 
                 {{#if (eq this.category_id "iofp5bchci")}} 
-                <!-- хардкодэд id категории, из которой нужно подтягивать подкатегории, а не статьи -->
+                <!-- хардкодэд id категории (ICO, Mobile Apps and More), 
+                из которой нужно подтягивать подкатегории, а не статьи -->
                   <ul class='card-links-list'>
                     {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
                       {{#if (lt @index 4)}} 

@@ -1923,6 +1923,8 @@ div#instant-search label {
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .footer-left-chunk {
@@ -2223,7 +2225,8 @@ a:hover {
 
 /* Footer i18n based layouts */
 
-.main-footer.de {
+.main-footer.de .services-list {
+    width: 320px;
 
 }
 .main-footer.fr .services-list > div:last-child {
