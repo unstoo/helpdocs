@@ -2221,6 +2221,18 @@ a:hover {
     width: 33%;
 }
 
+/* Footer i18n based layouts */
+
+.main-footer.de {
+
+}
+.main-footer.fr .services-list > div:last-child {
+    width: 130px;
+}
+.main-footer.it .services-list > div:last-child {
+    width: 130px;
+}
+
 /* Inline SVGs */
 
 .logo-icon {
