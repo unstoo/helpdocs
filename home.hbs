@@ -20,8 +20,7 @@
                 </ul>
 
                 {{#if (eq this.category_id "iofp5bchci")}} 
-                <!-- хардкодэд id категории (ICO, Mobile Apps and More), 
-                из которой нужно подтягивать подкатегории, а не статьи -->
+                <!-- хардкодэд id категории (ICO, Mobile apps), из которой нужно подтягивать подкатегории, а не статьи -->
                   <ul class='card-links-list'>
                     {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
                       {{#if (lt @index 4)}} 
@@ -33,7 +32,20 @@
 
                 {{#unless (eq this.category_id "iofp5bchci")}}
                   <a class="card-link" href="{{this.relative_url}}">
-                    <span class='more-hint'>More ›</span>
+                    <span class='more-hint'>
+                       {{#if (eq meta.language_code 'en')}}
+                          More ›
+                      {{/if}}
+                      {{#if (eq meta.language_code 'de')}}
+                          More ›
+                      {{/if}}
+                      {{#if (eq meta.language_code 'fr')}}
+                          Plus ›
+                      {{/if}}
+                      {{#if (eq meta.language_code 'it')}}
+                          More ›
+                      {{/if}}
+                    </span>
                   </a> 
                 {{/unless}}
 

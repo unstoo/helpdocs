@@ -54,7 +54,21 @@
           </li>
           <li>
             <button class='hamburger-open-button' id='hamburger-open-button'>
-              <span class="visually-hidden">Open menu</span>
+              <span class="visually-hidden">
+                <!-- For a11ty purposes -->
+                {{#if (eq meta.language_code 'en')}}
+                    Open menu
+                {{/if}}
+                {{#if (eq meta.language_code 'de')}}
+                    Open menu
+                {{/if}}
+                {{#if (eq meta.language_code 'fr')}}
+                    Ouvrir le menu
+                {{/if}}
+                {{#if (eq meta.language_code 'it')}}
+                    Open menu
+                {{/if}}
+              </span>
             </button>
           </li>
         </ul>
@@ -210,17 +224,18 @@
           <li>
             <button class='hamburger-open-button' id='hamburger-open-button'>
               <span class="visually-hidden">
+                <!-- For a11ty purposes -->
                 {{#if (eq meta.language_code 'en')}}
                   Open menu
                 {{/if}}
                 {{#if (eq meta.language_code 'de')}}
-                    Open menu
+                  Open menu
                 {{/if}}
                 {{#if (eq meta.language_code 'fr')}}
-                    Open menu
+                  Ouvrir le menu
                 {{/if}}
                 {{#if (eq meta.language_code 'it')}}
-                    Open menu
+                  Open menu
                 {{/if}}
               </span>
             </button>
@@ -431,7 +446,21 @@
           </li>
           <li>
             <button class='hamburger-open-button' id='hamburger-open-button'>
-              <span class="visually-hidden">Open menu</span>
+              <span class="visually-hidden">
+                <!-- For a11ty purposes -->
+                {{#if (eq meta.language_code 'en')}}
+                  Open menu
+                {{/if}}
+                {{#if (eq meta.language_code 'de')}}
+                  Open menu
+                {{/if}}
+                {{#if (eq meta.language_code 'fr')}}
+                  Ouvrir le menu
+                {{/if}}
+                {{#if (eq meta.language_code 'it')}}
+                  Open menu
+                {{/if}}
+              </span>
             </button>
           </li>
         </ul>
@@ -609,18 +638,19 @@
           <li>
             <button class='hamburger-open-button' id='hamburger-open-button'>
               <span class="visually-hidden">
+                <!-- For a11ty purposes -->
                 {{#if (eq meta.language_code 'en')}}
                   Open menu
-              {{/if}}
-              {{#if (eq meta.language_code 'de')}}
+                {{/if}}
+                {{#if (eq meta.language_code 'de')}}
                   Open menu
-              {{/if}}
-              {{#if (eq meta.language_code 'fr')}}
+                {{/if}}
+                {{#if (eq meta.language_code 'fr')}}
+                  Ouvrir le menu
+                {{/if}}
+                {{#if (eq meta.language_code 'it')}}
                   Open menu
-              {{/if}}
-              {{#if (eq meta.language_code 'it')}}
-                  Open menu
-              {{/if}}
+                {{/if}}
               </span>
             </button>
           </li>
@@ -776,17 +806,17 @@
           <!-- For a11ty purposes -->
           <span class='visually-hidden'>
             {{#if (eq meta.language_code 'en')}}
-                  Close Menu
-              {{/if}}
-              {{#if (eq meta.language_code 'de')}}
-                  Close Menu
-              {{/if}}
-              {{#if (eq meta.language_code 'fr')}}
-                  Close Menu
-              {{/if}}
-              {{#if (eq meta.language_code 'it')}}
-                  Close Menu
-              {{/if}}
+                Close Menu
+            {{/if}}
+            {{#if (eq meta.language_code 'de')}}
+                Close Menu
+            {{/if}}
+            {{#if (eq meta.language_code 'fr')}}
+                Fermer le menu
+            {{/if}}
+            {{#if (eq meta.language_code 'it')}}
+                Close Menu
+            {{/if}}
           </span>
         </button>
     </header>
