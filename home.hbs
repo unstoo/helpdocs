@@ -33,6 +33,9 @@
                 {{#unless (eq this.category_id "iofp5bchci")}}
                   <a class="card-link" href="{{this.relative_url}}">
                     <span class='more-hint'>
+                      <script>
+                        console.log({{ meta.language_code }})
+                      </script>
                        {{#if (eq meta.language_code 'en')}}
                           More ›
                       {{/if}}
