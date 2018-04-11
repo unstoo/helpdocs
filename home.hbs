@@ -33,20 +33,20 @@
                 {{#unless (eq this.category_id "iofp5bchci")}}
                   <a class="card-link" href="{{this.relative_url}}">
                     <span class='more-hint'>
-                      <script>
-                        console.log({{ meta.language_code }})
-                      </script>
-                       {{#if (eq meta.language_code 'en')}}
+                       {{#if (hasPrefix this.relative_url '/l/en')}}
                           More ›
                       {{/if}}
-                      {{#if (eq meta.language_code 'de')}}
-                          More ›
+                      {{#if (hasPrefix this.relative_url '/l/de')}}
+                          Mehr ›
                       {{/if}}
-                      {{#if (eq meta.language_code 'fr')}}
+                      {{#if (hasPrefix this.relative_url '/l/fr')}}
                           Plus ›
                       {{/if}}
-                      {{#if (eq meta.language_code 'it')}}
-                          More ›
+                      {{#if (hasPrefix this.relative_url '/l/it')}}
+                          Più ›
+                      {{/if}}
+                      {{#if (hasPrefix this.relative_url '/l/ru')}}
+                          Еще ›
                       {{/if}}
                     </span>
                   </a> 

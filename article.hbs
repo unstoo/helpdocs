@@ -34,7 +34,8 @@
         {{/if}}
         {{#if article.author.name}}
           <span class='author-info'>
-            {{i18n "updated" "Updated"}} {{article.updated_at_relative}}
+            {{i18n "updated" "Updated"}} 
+            {{!-- {{article.updated_at_relative}} --}}
             {{i18n "by" "by"}}
             {{article.author.name}}
           </span>

@@ -19,6 +19,9 @@
               <span class="text-muted">
                 {{i18n "updated" "Updated"}} {{article.updated_at_relative}}
               </span>
+              <script>
+                {{article.updated_at_relative}}
+              </script>
               {{#if article.author.name}}
                 <span class="text-muted">
                   {{i18n "by" "by"}}

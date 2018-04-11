@@ -2223,10 +2223,14 @@ a:hover {
     width: 33%;
 }
 
-/* Footer i18n based layouts */
+/* Footer i18n layout tweaks */
 
 .main-footer.de .services-list {
     width: 320px;
+
+}
+.main-footer.ru .services-list {
+    width: 326px;
 
 }
 .main-footer.fr .services-list > div:last-child {
@@ -2235,6 +2239,19 @@ a:hover {
 .main-footer.it .services-list > div:last-child {
     width: 130px;
 }
+
+
+
+/* Jeader i18n layout tweaks */
+.de #nav-list-2,
+.fr #nav-list-2, 
+.it #nav-list-2  {
+    width: 400px;
+}
+.ru .nav-list-2 a {
+    font-weight: 600;
+}
+
 
 /* Inline SVGs */
 
