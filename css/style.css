@@ -1513,7 +1513,7 @@ div#instant-search label {
         z-index: 3;
     }
     .hamburger-menu-hidden {
-        top: -560px;
+        top: -102%;
     }
     .hamburger-menu header {
         display: flex;
@@ -2116,7 +2116,7 @@ div#instant-search label {
         z-index: 3;
     }
     .hamburger-menu-hidden {
-        top: -560px;
+        top: -102%;
     }
     .hamburger-menu header {
         display: flex;
