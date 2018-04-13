@@ -49,7 +49,7 @@ strong {
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 0;
-    padding: 1.2rem 0 .2rem;
+    padding: 1.8rem 0 .4rem;
     color: #333;
     line-height: 36px;
 }
@@ -71,7 +71,6 @@ strong {
     border-radius: 4px;
     max-width: 100%;
     margin: 0;
-    padding: .8rem 0 1.2rem;
     margin: 1rem 0 2.4rem;
     border: 1px solid #f0f0f0;
 }
@@ -502,6 +501,7 @@ nav .navbar-brand img.logo {
 }
 .the-article  li {
     padding-bottom: 1rem;
+    margin-left: 2.4rem;
 }
 
 #article-body a {

@@ -14,7 +14,11 @@
                 <ul class='card-links-list'>
                   {{#each this.articles}} 
                     {{#if this.is_featured}} 
-                      <li> <a href='{{this.relative_url}}'>{{this.title}}</a></li>  
+                      <script>
+                        console.log('----')
+                        console.log({{this.tags}})
+                      </script>
+                      <li> <a href='{{this.relative_url}}'>{{this.title}}{{this.tags}}</a></li>  
                     {{/if}}
                   {{/each}}
                 </ul>
