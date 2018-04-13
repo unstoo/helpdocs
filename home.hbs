@@ -12,15 +12,27 @@
               </div>
               <div class='category-card-bottom'>
                 <ul class='card-links-list'>
-                  {{#each this.articles}} 
-                    {{#if this.is_featured}} 
-                      <script>
-                        console.log('----')
-                        console.log({{this.tags}})
-                      </script>
-                      <li> <a href='{{this.relative_url}}'>{{this.title}}{{this.tags}}</a></li>  
-                    {{/if}}
-                  {{/each}}
+                  <!-- Есть статьи на верхнем уровне данной категории -->
+                  {{#if this.articles}}
+                    {{#each this.articles}} 
+                      {{#if (hasPrefix this.tags 'promo')}} 
+                        <li> <a href='{{this.relative_url}}'>{{this.title}}</a></li>  
+                      {{/if}}
+                    {{/each}}
+                  <!-- На верхнем уровне категории статей нет - ищем в подкатегориях -->
+                  {{else}}
+                    {{#unless (eq this.category_id "iofp5bchci")}}
+                      {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
+                        {{#if (lt @index 4)}} 
+                          {{#each this.articles}} 
+                            {{#if (hasPrefix this.tags 'promo')}} 
+                            <li><a href='{{this.relative_url}}'>{{this.title}}</a></li>  
+                            {{/if}}
+                          {{/each}}
+                        {{/if}}
+                      {{/each}}
+                    {{/unless}}
+                  {{/if}}
                 </ul>
 
                 {{#if (eq this.category_id "iofp5bchci")}} 
