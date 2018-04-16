@@ -35,7 +35,9 @@
         {{#if article.author.name}}
           <span class='author-info'>
             {{i18n "updated" "Updated"}} 
-            {{!-- {{article.updated_at_relative}} --}}
+            {{#if (eq meta.language_code 'en')}}
+              {{article.updated_at_relative}}
+            {{/if}}
             {{i18n "by" "by"}}
             {{article.author.name}}
           </span>

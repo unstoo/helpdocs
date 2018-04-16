@@ -18,7 +18,10 @@
               {{/if}}
               <span class="text-muted">
                 {{i18n "updated" "Updated"}} 
-                {{!-- {{article.updated_at_relative}} --}}
+                {{#if (eq meta.language_code 'en')}}
+                  {{article.updated_at_relative}}
+                {{/if}}
+                
               </span>
               {{#if article.author.name}}
                 <span class="text-muted">
