@@ -912,6 +912,7 @@ div#header {
     position: absolute;
     z-index: 2;
     right: 12px;
+    bottom: 14px;
 }
 
 div#instant-search label {
@@ -1426,7 +1427,10 @@ div#instant-search label {
         background-position-x: calc(100% - 12px);
     }
     #article-instant-search .article-search-icon {
-        display: none;
+        position: absolute;
+        z-index: 2;
+        right: 12px;
+        bottom: 10px;
     }
     
     #category-meta h1 {
@@ -2461,7 +2465,7 @@ div#header {
     position: absolute;
     z-index: 2;
     left: calc(600px - 36px);
-    top: 17px;
+    top: 19px;
 }
 
 #article-instant-search .article-search-icon {
@@ -2981,9 +2985,6 @@ div#instant-search label {
         background-position-y: 50%;
         background-position-x: calc(100% - 12px);
     }
-    #article-instant-search .article-search-icon {
-        display: none;
-    }
     
     #category-meta h1 {
         font-size: 34px;
@@ -3237,9 +3238,6 @@ div#instant-search label {
         background-position-y: 50%;
         background-position-x: calc(100% - 12px);
     }
-    #article-instant-search .article-search-icon {
-        display: none;
-    }
     
     #category-meta h1 {
         font-size: 34px;
@@ -3350,9 +3348,6 @@ div#instant-search label {
         url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%3E%0A%20%20%20%20%3Cpath%20fill=%22#999%22%20fill-rule=%22evenodd%22%20d=%22M22%2020.682L20.682%2022l-6.474-6.474c-1.566%201.26-3.399%201.89-5.5%201.89-2.406%200-4.459-.85-6.159-2.549C.85%2013.167%200%2011.115%200%208.708%200%206.302.85%204.25%202.55%202.55%204.25.85%206.301%200%208.707%200c2.407%200%204.46.85%206.16%202.55%201.699%201.7%202.549%203.752%202.549%206.158%200%202.063-.63%203.877-1.891%205.443L22%2020.682zM3.208%2014.266c1.49%201.49%203.323%202.234%205.5%202.234%202.14%200%203.973-.764%205.5-2.292%201.528-1.527%202.292-3.36%202.292-5.5%200-2.139-.764-3.972-2.292-5.5-1.527-1.527-3.36-2.291-5.5-2.291-2.139%200-3.972.764-5.5%202.291C1.681%204.736.917%206.57.917%208.708c0%202.177.764%204.03%202.291%205.558z%22/%3E%0A%3C/svg%3E');
         background-position-y: 50%;
         background-position-x: calc(100% - 12px);
-    }
-    #article-instant-search .article-search-icon {
-        display: none;
     }
     
     #category-meta h1 {
@@ -3580,14 +3575,13 @@ div#instant-search label {
 @media only screen and (max-width: 420px) {
 
     .services-list {
-        width: 250px;
+        width: 270px;
     }
 
     #home #categories {
         padding-bottom: 20px;
     }
 }
-
 
 .hamburger-menu {
     display: none;
@@ -3763,43 +3757,7 @@ a:hover {
     width: 33%;
 }
 
-/* Footer i18n layout tweaks */
 
-.main-footer.de .services-list {
-    width: 320px;
-
-}
-.main-footer.ru .services-list {
-    width: 326px;
-
-}
-.main-footer.fr .services-list > div:last-child {
-    width: 130px;
-}
-.main-footer.it .services-list > div:last-child {
-    width: 130px;
-}
-
-
-
-/* Header i18n layout tweaks */
-.de #nav-list-2,
-.fr #nav-list-2, 
-.it #nav-list-2,
-.ru #nav-list-2,
-.es #nav-list-2,
-.pt #nav-list-2  {
-    width: 400px;
-    margin-left: 10px;
-}
-.ru .nav-list-2 a,
-.ru #nav-list-2 a {
-    font-weight: 600;
-}
-
-.ru#header a.contact-us-btn {
-    text-transform: none;
-}
 
 
 /* Inline SVGs */
@@ -4013,9 +3971,6 @@ a:hover {
         background-position-y: 50%;
         background-position-x: calc(100% - 12px);
     }
-    #article-instant-search .article-search-icon {
-        display: none;
-    }
     
     #category-meta h1 {
         font-size: 34px;
@@ -4126,9 +4081,6 @@ a:hover {
         url('data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20width=%2222%22%20height=%2222%22%20viewBox=%220%200%2022%2022%22%3E%0A%20%20%20%20%3Cpath%20fill=%22#999%22%20fill-rule=%22evenodd%22%20d=%22M22%2020.682L20.682%2022l-6.474-6.474c-1.566%201.26-3.399%201.89-5.5%201.89-2.406%200-4.459-.85-6.159-2.549C.85%2013.167%200%2011.115%200%208.708%200%206.302.85%204.25%202.55%202.55%204.25.85%206.301%200%208.707%200c2.407%200%204.46.85%206.16%202.55%201.699%201.7%202.549%203.752%202.549%206.158%200%202.063-.63%203.877-1.891%205.443L22%2020.682zM3.208%2014.266c1.49%201.49%203.323%202.234%205.5%202.234%202.14%200%203.973-.764%205.5-2.292%201.528-1.527%202.292-3.36%202.292-5.5%200-2.139-.764-3.972-2.292-5.5-1.527-1.527-3.36-2.291-5.5-2.291-2.139%200-3.972.764-5.5%202.291C1.681%204.736.917%206.57.917%208.708c0%202.177.764%204.03%202.291%205.558z%22/%3E%0A%3C/svg%3E');
         background-position-y: 50%;
         background-position-x: calc(100% - 12px);
-    }
-    #article-instant-search .article-search-icon {
-        display: none;
     }
     
     #category-meta h1 {
@@ -4350,17 +4302,6 @@ a:hover {
     }
 }
 
-@media only screen and (max-width: 420px) {
-
-    .services-list {
-        width: 250px;
-    }
-
-    #home #categories {
-        padding-bottom: 20px;
-    }
-}
-
 
 .hamburger-menu {
     display: none;
@@ -4525,6 +4466,10 @@ a:hover {
     #search-mobile-wrapper.hidden-home-search {
         display: none;
     }
+
+    #article-instant-search label {
+        display: block;
+    }
 }
 
 a:hover {
@@ -4646,7 +4591,7 @@ a:hover {
 
 #article-body .in-article-button {
     border: none;
-    display: inline-block;
+    display: block;
     font-weight: bold;
     color: #fff;
     background-color: #242d3b;
@@ -4660,4 +4605,54 @@ a:hover {
     -webkit-filter: brightness(100%);
     filter: brightness(100%);
     margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 360px;
+}
+
+.cryptopay-home {
+    display: inline-block;
+    height: 17px;
+}
+
+/* Footer i18n layout tweaks */
+
+.main-footer.de .services-list,
+.main-footer.ru .services-list {
+    width: 326px;
+
+}
+
+.main-footer.fr .services-list > div:last-child,
+.main-footer.it .services-list > div:last-child {
+    width: 130px;
+}
+.main-footer.pt .services-list,
+.main-footer.es .services-list {
+    text-transform: none;
+}
+.main-footer.pt .services-list > div:first-child,
+.main-footer.es .services-list > div:first-child {
+    margin-right: 10px;
+}
+
+
+
+/* Header i18n layout tweaks */
+.de #nav-list-2,
+.fr #nav-list-2, 
+.it #nav-list-2,
+.ru #nav-list-2,
+.es #nav-list-2,
+.pt #nav-list-2  {
+    width: 400px;
+    margin-left: 10px;
+}
+.ru .nav-list-2 a,
+.ru #nav-list-2 a {
+    font-weight: 600;
+}
+
+.ru#header a.contact-us-btn {
+    text-transform: none;
 }
