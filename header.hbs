@@ -102,7 +102,8 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lang-dropdown">
                   {{#each meta.languages}}
-                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}">
+                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}/category/{{category.category_id}}">
+                    
                       {{this.name}}
                     </a>
                   {{/each}}
@@ -378,7 +379,7 @@
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="lang-dropdown">
                   {{#each meta.languages}}
-                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}">
+                    <a class="dropdown-item" href="{{rootPath meta.home_path}}/l/{{this.code}}/article/{{article.article_id}}">
                       {{this.name}}
                     </a>
                   {{/each}}

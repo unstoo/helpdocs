@@ -4610,6 +4610,11 @@ a:hover {
     max-width: 360px;
 }
 
+#article-body .text-centre {
+    display: block;
+    text-align: center;
+}
+
 .cryptopay-home {
     display: inline-block;
     height: 17px;
