@@ -12,27 +12,24 @@
               </div>
               <div class='category-card-bottom'>
                 <ul class='card-links-list'>
-                  <!-- Есть статьи на верхнем уровне данной категории -->
-                  {{#if this.articles}}
+                  <!-- Ищем promo статьи на верхнем уровне данной категории -->
+                  {{#unless (eq this.category_id "iofp5bchci")}}
                     {{#each this.articles}} 
                       {{#if (hasPrefix this.tags 'promo')}} 
                         <li> <a href='{{this.relative_url}}'>{{this.title}}</a></li>  
                       {{/if}}
                     {{/each}}
-                  <!-- На верхнем уровне категории статей нет - ищем в подкатегориях -->
-                  {{else}}
-                    {{#unless (eq this.category_id "iofp5bchci")}}
-                      {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
-                        {{#if (lt @index 4)}} 
-                          {{#each this.articles}} 
-                            {{#if (hasPrefix this.tags 'promo')}} 
-                            <li><a href='{{this.relative_url}}'>{{this.title}}</a></li>  
-                            {{/if}}
-                          {{/each}}
-                        {{/if}}
-                      {{/each}}
-                    {{/unless}}
-                  {{/if}}
+                    <!-- Ищем promo статьи в подкатегориях -->
+                    {{#each (filterCategoriesByParentId @root.meta.sidebar_categories this.category_id)}}
+                      {{#if (lt @index 4)}} 
+                        {{#each this.articles}} 
+                          {{#if (hasPrefix this.tags 'promo')}} 
+                          <li><a href='{{this.relative_url}}'>{{this.title}}</a></li>  
+                          {{/if}}
+                        {{/each}}
+                      {{/if}}
+                    {{/each}}
+                  {{/unless}}
                 </ul>
 
                 {{#if (eq this.category_id "iofp5bchci")}} 
