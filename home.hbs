@@ -1,5 +1,5 @@
 <div id="home">
-  <div id="categories" class="container-fluid row">
+  <div id="categories" class="container-fluid row {{#if (eq meta.language_code 'en')}}en-categories{{/if}}">
     {{#each categories}}
       {{#unless this.parent_category_id}}
         <div class='col-sm-6 col-md-3'>
